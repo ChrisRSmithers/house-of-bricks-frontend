@@ -11,7 +11,7 @@ describe('<Header>',()=>{
             </MemoryRouter>
           );
       
-          expect(getByText('House of Bricks')).toBeTruthy();
+          expect(getByText('Welcom to House of Bricks')).toBeTruthy();
     })
 })
 
