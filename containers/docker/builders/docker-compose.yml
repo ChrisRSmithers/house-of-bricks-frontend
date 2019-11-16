@@ -1,0 +1,15 @@
+version: '3.0'
+services:
+  root:
+    # TODO: putting in missing info or passing through command line
+    image: ${AWS_ACCOUNT_ID}.dkr.ecr.${REGION}.amazonaws.com/root:1.0
+    container_name: base_root
+    build: ./root
+  node:
+    image: ${AWS_ACCOUNT_ID}.dkr.ecr.${REGION}.amazonaws.com/node:1.0
+    container_name: base_node
+    build: ./node
+  nginx:
+    image: ${AWS_ACCOUNT_ID}.dkr.ecr.${REGION}.amazonaws.com/nginx:1.0
+    container_name: base_nginx
+    build: ./nginx
